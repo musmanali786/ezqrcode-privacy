@@ -1,0 +1,1 @@
+# ezqrcode-privacy
