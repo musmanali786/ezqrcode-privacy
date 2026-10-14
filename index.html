@@ -1,220 +1,176 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>EZ QR Code — Privacy Policy &amp; Data Deletion</title>
+<title>QR Code Designer Privacy Policy</title>
 <style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    max-width: 760px;
-    margin: 40px auto;
-    padding: 0 20px 80px;
-    line-height: 1.6;
-    color: #1f2937;
+  /* Layout: single-column legal document, generous measure, numbered sections (a real legal-doc convention, not decoration) */
+  :root {
+    --bg: #fbfaf8;
+    --surface: #ffffff;
+    --fg: #1c1b19;
+    --muted: #65605a;
+    --border: #e7e3dc;
+    --accent: #2563eb;
+    --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
-  h1 { font-size: 28px; margin-bottom: 4px; }
-  h2 { font-size: 20px; margin-top: 36px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; }
-  h3 { font-size: 16px; margin-top: 22px; }
-  .meta { color: #6b7280; font-size: 13px; margin-bottom: 24px; }
-  ul, ol { padding-left: 22px; }
-  li { margin-bottom: 6px; }
-  code { background: #f3f4f6; padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
-  a { color: #2563eb; }
-  .toc { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px 20px; }
-  .toc ul { margin: 0; }
-  .callout { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 6px; margin: 18px 0; }
-  hr { border: 0; border-top: 1px solid #e5e7eb; margin: 32px 0; }
-  footer { margin-top: 48px; color: #6b7280; font-size: 13px; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15130f;
+      --surface: #1d1b17;
+      --fg: #ece8e1;
+      --muted: #a39d92;
+      --border: #332f28;
+      --accent: #6ea8ff;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15130f;
+    --surface: #1d1b17;
+    --fg: #ece8e1;
+    --muted: #a39d92;
+    --border: #332f28;
+    --accent: #6ea8ff;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0 16px;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-block: 48px 80px;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+  }
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 5vw, 38px);
+    line-height: 1.15;
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 21px;
+    margin: 40px 0 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  h2 .num {
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  p { margin: 0 0 14px; max-width: 65ch; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; max-width: 62ch; }
+  strong { font-weight: 600; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 0 0 14px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 16px;
+    font-size: 14.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th { color: var(--muted); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .table-wrap { overflow-x: auto; margin: 0 0 20px; }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
 </style>
-</head>
-<body>
 
-<h1>EZ QR Code — Privacy Policy</h1>
-<p class="meta">Effective date: 29 May 2026 · Last updated: 29 May 2026</p>
+<div class="page">
+  <header>
+    <p class="eyebrow">Privacy Policy</p>
+    <h1>QR Code Designer</h1>
+    <p class="meta">Published by Hayat Tech &middot; Effective October 14, 2026</p>
+  </header>
 
-<p>
-This privacy policy explains how the EZ QR Code mobile app
-(package <code>com.hayat.ezqrcode</code>, "the app", "we", "us") collects, uses,
-and protects your information. By using the app you agree to this policy.
-</p>
+  <p>QR Code Designer ("the app") is a QR code generator and scanner made by Hayat Tech. This page explains what data the app collects, how it's used, and how you can delete it. The app works fully offline for generating, designing, scanning, and saving QR codes — an account is only needed if you want your library synced across devices.</p>
 
-<div class="toc">
-<strong>Quick links</strong>
-<ul>
-  <li><a href="#what-we-collect">What we collect</a></li>
-  <li><a href="#how-we-use">How we use it</a></li>
-  <li><a href="#third-parties">Third parties we share data with</a></li>
-  <li><a href="#security">Security &amp; retention</a></li>
-  <li><a href="#your-rights">Your rights</a></li>
-  <li><a href="#delete-account"><strong>Delete your account</strong></a></li>
-  <li><a href="#delete-data"><strong>Delete your data</strong></a></li>
-  <li><a href="#children">Children's privacy</a></li>
-  <li><a href="#contact">Contact us</a></li>
-</ul>
+  <h2><span class="num">1</span> Data we collect</h2>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Data</th><th>Why we collect it</th><th>Where it's stored</th></tr>
+      <tr><td>Email address</td><td>Creating and signing in to your account (email/password or Google Sign-In)</td><td>Supabase (our backend provider)</td></tr>
+      <tr><td>QR codes you create or save</td><td>So your library is available in the app, and across devices if you're signed in</td><td>On your device always; also on Supabase if you're signed in</td></tr>
+      <tr><td>Camera access</td><td>Scanning QR codes</td><td>Not stored or transmitted — used live, on-device only</td></tr>
+      <tr><td>Photo library access</td><td>Choosing a logo image for a QR design, and saving exported QR images</td><td>Your device's own photo library</td></tr>
+      <tr><td>Purchase data</td><td>Processing the optional ad-free subscription</td><td>Handled by Google Play Billing — we never see your payment details</td></tr>
+      <tr><td>Advertising identifiers</td><td>Showing ads to free-tier users, via Google AdMob</td><td>Processed by Google per its own privacy policy</td></tr>
+    </table>
+  </div>
+  <p>We don't collect your name, phone number, contacts, or precise location, and we don't read the contents of your photo library beyond the single image you choose to pick.</p>
+
+  <h2><span class="num">2</span> Advertising</h2>
+  <p>Free-tier use of the app shows ads served by Google AdMob. Where required by law (including the EU, UK, and Switzerland), you'll be shown a consent screen before any personalized ad is requested, and you can change your choice at any time from AdMob's privacy options. You can remove ads entirely with the in-app "Remove Ads" subscription.</p>
+
+  <h2><span class="num">3</span> Third-party services</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Supabase</strong> — authentication and cloud storage for your synced QR library.</li>
+      <li><strong>Google AdMob</strong> — ad serving and consent management for free-tier users.</li>
+      <li><strong>Google Play Billing</strong> — processes the ad-free subscription purchase.</li>
+      <li><strong>Google Sign-In</strong> — optional sign-in method, if you choose it instead of email/password.</li>
+    </ul>
+  </div>
+  <p>We don't sell your data, and we don't share it with anyone beyond the service providers above, each acting under their own privacy terms, solely to provide the functionality listed in this policy.</p>
+
+  <h2><span class="num">4</span> Deleting your data</h2>
+  <p>You can delete everything at any time from <strong>Profile &rarr; Delete Account &amp; Data</strong>. For signed-in accounts, this permanently deletes your account and every QR code saved to the cloud. For guest use, it clears everything saved on your device. This cannot be undone.</p>
+  <p>You can also just uninstall the app to remove everything stored locally on your device.</p>
+
+  <h2><span class="num">5</span> Children's privacy</h2>
+  <p>QR Code Designer is not directed at children under 13, and we do not knowingly collect personal data from children under 13.</p>
+
+  <h2><span class="num">6</span> Changes to this policy</h2>
+  <p>If this policy changes, we'll update the effective date above. Continued use of the app after a change means you accept the updated policy.</p>
+
+  <h2><span class="num">7</span> Contact</h2>
+  <p>Questions about this policy or your data: <a href="mailto:support@hayattech.pk">support@hayattech.pk</a></p>
+
+  <footer>
+    &copy; 2026 Hayat Tech. QR Code Designer.
+  </footer>
 </div>
-
-<h2 id="what-we-collect">1. What we collect</h2>
-
-<h3>Information you provide</h3>
-<ul>
-  <li>
-    <strong>Account information</strong> — if you choose to create an account, we collect your
-    email address and (for password sign-ups) a securely hashed password. If you sign in with
-    Google, we receive your email and Google account ID via OAuth.
-  </li>
-  <li>
-    <strong>QR content you generate or save</strong> — the URLs, text, contact details, Wi-Fi
-    credentials, payment usernames, and any titles, captions, or logos you attach to a QR code.
-  </li>
-</ul>
-
-<h3>Information collected automatically</h3>
-<ul>
-  <li>
-    <strong>App activity</strong> — counts of QR codes you generate, save, share, or upload to
-    cloud, used to enforce per-day free-tier limits. For guest users this is stored only on your
-    device; for signed-in users this also lives in our backend account record.
-  </li>
-  <li>
-    <strong>Device &amp; advertising data</strong> — Google AdMob collects an advertising
-    identifier and limited device metadata to serve ads. See
-    <a href="https://support.google.com/admob/answer/9012903">AdMob's data-disclosure guide</a>.
-  </li>
-</ul>
-
-<p><strong>What we do NOT collect:</strong> we do not collect your contacts, photos library, microphone audio, precise location, SMS, call logs, browsing history, or any health/financial data.</p>
-
-<h2 id="how-we-use">2. How we use your information</h2>
-<ul>
-  <li>To generate, save, sync, and display QR codes you create.</li>
-  <li>To enforce free-tier daily and lifetime limits fairly across users.</li>
-  <li>To authenticate you when you sign in and keep your session secure.</li>
-  <li>To serve and measure advertising via Google AdMob.</li>
-  <li>To respond to support requests you send us by email.</li>
-</ul>
-
-<p>We do <strong>not</strong> sell your personal data. We do not use your QR content for advertising targeting.</p>
-
-<h2 id="third-parties">3. Third parties we share data with</h2>
-<ul>
-  <li>
-    <strong>Supabase</strong> — our backend hosting and authentication provider. Stores your
-    account record (email, hashed credentials, sign-in metadata) and any QR codes you choose to
-    upload to cloud. See <a href="https://supabase.com/privacy">Supabase Privacy Policy</a>.
-  </li>
-  <li>
-    <strong>Google (Sign-In + AdMob)</strong> — handles Google OAuth sign-in and serves
-    advertisements inside the app. See
-    <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
-  </li>
-</ul>
-
-<p>All data transmitted between your device and these services is encrypted in transit using HTTPS/TLS.</p>
-
-<h2 id="security">4. Security &amp; retention</h2>
-<ul>
-  <li>All network traffic is encrypted (HTTPS/TLS).</li>
-  <li>Passwords are stored hashed by Supabase Auth — we never see them in plaintext.</li>
-  <li>QR codes you save without signing in stay only on your device.</li>
-  <li>Cloud-synced QR codes are retained until you delete them, or until you delete your account.</li>
-  <li>Backups of cloud data may persist for up to 30 days after deletion before being permanently erased.</li>
-</ul>
-
-<h2 id="your-rights">5. Your rights</h2>
-<p>You have the right to:</p>
-<ul>
-  <li>Access the personal data we hold about you (email us).</li>
-  <li>Correct inaccurate information (edit it in the app or email us).</li>
-  <li>Delete your data — see the sections below.</li>
-  <li>Withdraw consent at any time by deleting the app and your account.</li>
-</ul>
-
-<hr />
-
-<h2 id="delete-account">6. How to delete your account</h2>
-
-<p>
-You can permanently delete your EZ QR Code account, your saved QR codes, and all associated data
-either from inside the app or by emailing us.
-</p>
-
-<h3>Option A — Delete from inside the app (fastest)</h3>
-<ol>
-  <li>Open EZ QR Code on your device.</li>
-  <li>Tap the <strong>Profile</strong> tab.</li>
-  <li>Scroll down and tap <strong>Delete account</strong>.</li>
-  <li>Confirm the action.</li>
-</ol>
-<p>Your account, email, sign-in records, and all cloud-synced QR codes are removed immediately. Local QR codes saved on your device are also cleared.</p>
-
-<h3>Option B — Email request</h3>
-<p>
-If you can't access the app, send an email to
-<a href="mailto:m.usmanali@threados.ai">m.usmanali@threados.ai</a> from the email address linked
-to your account, with the subject line <strong>"Delete my account"</strong>. We will process the
-deletion within 7 working days and confirm by reply.
-</p>
-
-<h3>What gets deleted</h3>
-<ul>
-  <li>Your account record (email, hashed password, OAuth identifier)</li>
-  <li>All QR codes you uploaded to cloud</li>
-  <li>Your usage counters and preferences</li>
-</ul>
-
-<h3>What is kept (and for how long)</h3>
-<ul>
-  <li>Encrypted backups may retain your data for up to 30 days before permanent erasure.</li>
-  <li>Aggregated, non-identifying usage statistics (e.g. "100 QR codes were created today" with no link to you) are kept indefinitely.</li>
-</ul>
-
-<hr />
-
-<h2 id="delete-data">7. How to delete specific data without deleting your account</h2>
-
-<p>You don't have to delete your entire account to remove individual items.</p>
-
-<h3>Delete individual QR codes</h3>
-<ol>
-  <li>Open EZ QR Code.</li>
-  <li>Tap the <strong>Library</strong> tab.</li>
-  <li>Find the QR code you want to remove and tap the <strong>trash icon</strong> on that row.</li>
-  <li>Confirm. The QR code is removed from both your device and (if you were signed in) our backend.</li>
-</ol>
-
-<h3>Clear all local-only data</h3>
-<p>To clear every QR code stored locally on your device without deleting your account:</p>
-<ol>
-  <li>Android Settings → Apps → EZ QR Code → Storage → Clear data.</li>
-</ol>
-
-<h3>Email request</h3>
-<p>
-For any other data deletion request, email
-<a href="mailto:m.usmanali@threados.ai">m.usmanali@threados.ai</a> with the subject
-<strong>"Delete specific data"</strong> and describe what you want removed. We will process it
-within 7 working days.
-</p>
-
-<hr />
-
-<h2 id="children">8. Children's privacy</h2>
-<p>EZ QR Code is not directed at children under 13. We do not knowingly collect personal information from children under 13. If we learn that we have collected such information, we will delete it.</p>
-
-<h2 id="changes">9. Changes to this policy</h2>
-<p>We may update this policy from time to time. The "Last updated" date at the top reflects the latest version. Material changes will be communicated in the app or by email if you have an account.</p>
-
-<h2 id="contact">10. Contact us</h2>
-<p>
-Questions, complaints, or data requests:<br />
-<a href="mailto:m.usmanali@threados.ai">m.usmanali@threados.ai</a>
-</p>
-
-<footer>
-&copy; 2026 EZ QR Code. All rights reserved.
-</footer>
-
-</body>
-</html>
